@@ -1,6 +1,9 @@
 "use strict";
 
 function openURLInPrivateWindow(url) {
+    if (url.startsWith("about:")) {
+        return;
+    }
     browser.windows.create({ url, incognito: true });
 }
 
@@ -8,11 +11,7 @@ function openURLInPrivateWindow(url) {
 // Add toolbar button.
 //
 browser.browserAction.onClicked.addListener(tab => {
-    const url = tab.url;
-    if (url.startsWith("about:")) {
-        return;
-    }
-    openURLInPrivateWindow(url);
+    openURLInPrivateWindow(tab.url);
 });
 
 //
