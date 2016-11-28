@@ -1,10 +1,16 @@
 {
   "manifest_version": 2,
   "name": "Open Page in Private Window",
-  "version": "0.3.0",
+  "version": "0.4.0",
 
   "description": "Open Page in Private Window",
   "homepage_url": "https://github.com/cpeterso/Open-Page-in-Private-Window/",
+
+  "applications": {
+      "gecko": {
+        "id": "open-page-in-private-window@cpeterso.com"
+      }
+  },
 
   "icons": {
     "48": "icon.svg"
