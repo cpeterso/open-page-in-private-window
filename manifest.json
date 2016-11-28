@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Open Page in Private Window",
-  "version": "0.2.0",
+  "version": "0.2.1",
 
   "description": "Open Page in Private Window",
   "homepage_url": "https://github.com/cpeterso/Open-Page-in-Private-Window/",
