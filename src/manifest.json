@@ -4,7 +4,7 @@
   "version": "0.4.1",
 
   "description": "Open a copy of the current page in a new Private Window.",
-  "homepage_url": "https://github.com/cpeterso/open-page-in-private-window/",
+  "homepage_url": "https://addons.mozilla.org/firefox/addon/open-page-in-private-window/",
 
   "applications": {
       "gecko": {
