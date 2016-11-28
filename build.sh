@@ -1,2 +1,1 @@
-zip -9 amo/Open-Page-in-Private-Window.zip LICENSE.md README.md background.js icon.svg manifest.json
-
+addons-linter src && web-ext build -s src
