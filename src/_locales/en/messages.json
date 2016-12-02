@@ -1,0 +1,16 @@
+{
+  "extensionName": {
+    "message": "Open Page in Private Window",
+    "description": "Name of the extension and toolbar button tooltip."
+  },
+
+  "extensionDescription": {
+    "message": "Open a copy of the current page in a new Private Window.",
+    "description": "Description of the extension."
+  },
+
+  "menuItemTitle": {
+    "message": "Open Page in Private Window",
+    "description": "Title of the context menu item."
+  }
+}
