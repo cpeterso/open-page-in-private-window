@@ -1,19 +1,15 @@
 {
-  "manifest_version": 2,
-  "name": "__MSG_extensionName__",
   "default_locale": "en",
   "description": "__MSG_extensionDescription__",
   "homepage_url": "https://addons.mozilla.org/firefox/addon/open-page-in-private-window/",
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
   "version": "0.6.0",
 
   "applications": {
       "gecko": {
         "id": "open-page-in-private-window@cpeterso.com"
       }
-  },
-
-  "icons": {
-    "48": "icon.svg"
   },
 
   "background": {
@@ -23,6 +19,10 @@
   "browser_action": {
     "browser_style": true,
     "default_icon": "icon.svg"
+  },
+
+  "icons": {
+    "48": "icon.svg"
   },
 
   "permissions": [
