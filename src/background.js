@@ -1,7 +1,7 @@
 "use strict";
 
 function openURLInPrivateWindow(url) {
-    if (url.startsWith("about:")) {
+    if (url.startsWith("about:") || url.startsWith("chrome:")) {
         return;
     }
     browser.windows.create({ url, incognito: true });
