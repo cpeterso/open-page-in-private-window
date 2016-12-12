@@ -1,0 +1,16 @@
+{
+  "extensionName": {
+    "message": "Open Page in Private Window",
+    "description": "Name of the extension and toolbar button tooltip."
+  },
+
+  "extensionDescription": {
+    "message": "Odpri kopijo trenutne strani v novem zasebnem okno.",
+    "description": "Description of the extension."
+  },
+
+  "menuItemTitle": {
+    "message": "Odpri stran v zasebnem oknu",
+    "description": "Title of the context menu item."
+  }
+}
