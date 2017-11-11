@@ -1,1 +1,1 @@
-addons-linter src && web-ext build -s src
+addons-linter src && web-ext build -o -s src
