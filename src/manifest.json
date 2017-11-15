@@ -22,7 +22,8 @@
   },
 
   "icons": {
-    "48": "icon-48.png"
+    "48": "icon.svg",
+    "96": "icon.svg"
   },
 
   "permissions": [
