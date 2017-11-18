@@ -8,14 +8,14 @@ function openURLInPrivateWindow(url) {
 }
 
 //
-// Add toolbar button.
+// Add toolbar button handler.
 //
 browser.browserAction.onClicked.addListener(tab => {
     openURLInPrivateWindow(tab.url);
 });
 
 //
-// Add context menu item.
+// Add context menu item handler.
 //
 const menuItemTitle = browser.i18n.getMessage("menuItemTitle");
 browser.contextMenus.create({title: menuItemTitle});
