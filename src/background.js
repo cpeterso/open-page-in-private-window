@@ -17,8 +17,8 @@ browser.browserAction.onClicked.addListener(tab => {
 //
 // Add context menu item handler.
 //
-const menuItemTitle = browser.i18n.getMessage("menuItemTitle");
-browser.contextMenus.create({title: menuItemTitle});
+const actionTitle = browser.i18n.getMessage("actionTitle");
+browser.contextMenus.create({title: actionTitle});
 
 browser.contextMenus.onClicked.addListener((info, tab) => {
     openURLInPrivateWindow(tab.url);

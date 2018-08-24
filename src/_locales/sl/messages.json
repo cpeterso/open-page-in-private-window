@@ -9,8 +9,8 @@
     "description": "Description of the extension."
   },
 
-  "menuItemTitle": {
+  "actionTitle": {
     "message": "Odpri stran v zasebnem oknu",
-    "description": "Title of the context menu item."
+    "description": "Title of the context menu item and toolbar icon."
   }
 }

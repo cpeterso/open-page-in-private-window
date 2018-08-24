@@ -9,8 +9,8 @@
     "description": "Description of the extension."
   },
 
-  "menuItemTitle": {
+  "actionTitle": {
     "message": "Aprire la pagina nella finestra privata",
-    "description": "Title of the context menu item."
+    "description": "Title of the context menu item and toolbar icon."
   }
 }
