@@ -1,0 +1,16 @@
+{
+  "extensionName": {
+    "message": "Open Page in Private Window",
+    "description": "Name of the extension and toolbar button tooltip."
+  },
+
+  "extensionDescription": {
+    "message": "新建一个隐私浏览窗口打开一份当前页面（不关闭原标签页、不清理浏览记录）。",
+    "description": "Description of the extension."
+  },
+
+  "actionTitle": {
+    "message": "新建隐私浏览窗口打开当前页面",
+    "description": "Title of the context menu item and toolbar icon."
+  }
+}
