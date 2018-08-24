@@ -10,7 +10,7 @@
   },
 
   "actionTitle": {
-    "message": "Seite in privaten Fenster öffnen",
+    "message": "Seite in privatem Fenster öffnen",
     "description": "Title of the context menu item and toolbar icon."
   }
 }
