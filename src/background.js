@@ -4,18 +4,23 @@ function reportError(functionName, error) {
     console.error(`Open Page in Private Window: ${functionName} returned error "${error}"`);
 }
 
-function openURLInPrivateWindow(url) {
+async function openURLInPrivateWindow(url) {
     if (url.startsWith("about:") || url.startsWith("chrome:")) {
         return;
     }
-    browser.windows.create({ url, incognito: true });
+
+    try {
+        await browser.windows.create({ url, incognito: true });
+    } catch (windowError) {
+        reportError("browser.windows.create", windowError);
+    }
 }
 
 //
 // Add toolbar button handler.
 //
-browser.browserAction.onClicked.addListener(tab => {
-    openURLInPrivateWindow(tab.url);
+browser.browserAction.onClicked.addListener(async (tab) => {
+    await openURLInPrivateWindow(tab.url);
 });
 
 //
@@ -29,6 +34,6 @@ browser.contextMenus.create({title: actionTitle}, () => {
     }
 });
 
-browser.contextMenus.onClicked.addListener((info, tab) => {
-    openURLInPrivateWindow(tab.url);
+browser.contextMenus.onClicked.addListener(async (info, tab) => {
+    await openURLInPrivateWindow(tab.url);
 });
