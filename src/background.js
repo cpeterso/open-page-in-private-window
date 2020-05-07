@@ -1,7 +1,18 @@
 "use strict";
 
+const FIREFOX_RELNOTES_URL = "https://www.mozilla.org/firefox/releasenotes/";
+const PRIVATE_WINDOWS_KB_URL = "https://support.mozilla.org/kb/extensions-private-browsing#w_granting-permission-on-installation";
+
 function reportError(functionName, error) {
     console.error(`Open Page in Private Window: ${functionName} returned error "${error}"`);
+}
+
+function openTab(url) {
+    try {
+        browser.tabs.create({ url });
+    } catch (tabError) {
+        reportError("browser.tabs.create", tabError);
+    }
 }
 
 async function openURLInPrivateWindow(url) {
@@ -23,6 +34,8 @@ async function openURLInPrivateWindow(url) {
         } catch (notificationError) {
           reportError("browser.notifications.create", notificationError);
         }
+
+        openTab("Run_in_Private_Windows.html");
     }
 }
 
@@ -46,4 +59,21 @@ browser.contextMenus.create({title: actionTitle}, () => {
 
 browser.contextMenus.onClicked.addListener(async (info, tab) => {
     await openURLInPrivateWindow(tab.url);
+});
+
+//
+// Tell users the extension needs the "Run in Private Windows" permission.
+//
+browser.runtime.onInstalled.addListener(({ reason, temporary }) => {
+    switch (reason) {
+        case "install":
+            openTab(PRIVATE_WINDOWS_KB_URL);
+            break;
+        case "update":
+            // To notify users who have the extension installed but never
+            // granted the "Run in Private Windows" permission, try to open
+            // a page in a Private Window.
+            openURLInPrivateWindow(FIREFOX_RELNOTES_URL);
+            break;
+    }
 });
