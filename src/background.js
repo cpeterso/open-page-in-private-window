@@ -13,6 +13,16 @@ async function openURLInPrivateWindow(url) {
         await browser.windows.create({ url, incognito: true });
     } catch (windowError) {
         reportError("browser.windows.create", windowError);
+
+        try {
+            await browser.notifications.create({
+                type: "basic",
+                title: String(windowError),
+                message: `"Open Page in Private Window" extension needs your permission to run in Private Windows.`,
+            });
+        } catch (notificationError) {
+          reportError("browser.notifications.create", notificationError);
+        }
     }
 }
 
